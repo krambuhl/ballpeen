@@ -15,7 +15,7 @@ gulp.task('copy-template', function(done) {
 });
 
 gulp.task('modify-package', function(done) {
-  return gulp.src(__dirname + '/package.json')
+  return gulp.src('package.json')
     .pipe(through.obj(function(file, enc, next) {
       var data = JSON.parse(file);
       Object.assign(data.devDependencies, pkg.dependencies);
@@ -24,6 +24,10 @@ gulp.task('modify-package', function(done) {
     .pipe(gulp.dest('./'));
 });
 
+gulp.task('install-deps', function() {
+  return gulp.src('package.json').pipe(install());
+})
+
 gulp.task('default', function(done) {
-  sequence(['copy-template', 'modify-package'], done);
+  sequence(['copy-template', 'modify-package'], 'install-deps', done);
 });
