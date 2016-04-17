@@ -1,0 +1,25 @@
+{
+  "name": "fe-task-styles",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krambuhl/fe-task-styles.git"
+  },
+  "author": "Evan Krambuhl <thekrambuhl@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/krambuhl/fe-task-styles/issues"
+  },
+  "homepage": "https://github.com/krambuhl/fe-task-styles#readme",
+  "dependencies": {
+    "autoprefixer-core": "^6.0.1",
+    "gulp-postcss": "^6.1.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0"
+  }
+}
